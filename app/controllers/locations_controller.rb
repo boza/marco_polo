@@ -8,7 +8,6 @@ class LocationsController < ApplicationController
     respond_with(@location)
   end
 
-
   private
 
   def find_travel_journal

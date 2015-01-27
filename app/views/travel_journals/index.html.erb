@@ -1,8 +1,11 @@
 <% if @travel_journals.empty? %>
   <h3>You don't have any travel journals; want to <%= link_to "create one?", [:new, :travel_journal] %></h3>
+
+<% else %>
+  <span class='new_journal'> <%= link_to "New Journal", [:new, :travel_journal], class:'button' %> </span>
+  <ul class='travel_journal'>
+    <% @travel_journals.each do |travel_journal| %>
+      <li> <%= link_to travel_journal.title, travel_journal %> </li>
+    <% end %>
+  </ul>
 <% end %>
-<ul class='travel_journal'>
-  <% @travel_journals.each do |travel_journal| %>
-    <li> <%= link_to travel_journal.title, travel_journal %> </li>
-  <% end %>
-</ul>
