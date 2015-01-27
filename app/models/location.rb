@@ -3,7 +3,7 @@ class Location < ActiveRecord::Base
 
   has_many :images, dependent: :destroy
 
-  geocoded_by :address
+  geocoded_by :address, latitude: :lat, longitude: :lng
   after_validation :geocode 
 
 end
