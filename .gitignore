@@ -7,6 +7,9 @@
 # Ignore bundler config.
 **/*/.bundle
 .bundle
+/bin/*
+!/bin/rails
+!/bin/rake
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
