@@ -1,10 +1,11 @@
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+require 'clearance/test_unit'
 require 'vcr'
 
 VCR.configure do |c|
-  c.cassette_library_dir = 'test/fixtures/vcr_cassettes'
+  c.cassette_library_dir = 'test/vcr_cassettes'
   c.hook_into :webmock # or :fakeweb
 end
 

@@ -3,6 +3,10 @@
   <%= simple_form_for [@travel_journal, @location] do |form| %>
     <%= form.input :title %>
     <%= form.input :post %>
+    <%= form.simple_fields_for :images do |image_fields| %>
+      <%= image_fields.attachment_field :upload %>
+    <% end %>
     <%= form.submit %>
+    <%= link_to "Back", @travel_journal %>
   <% end %>
 </div>

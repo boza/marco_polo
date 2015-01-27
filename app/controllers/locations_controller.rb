@@ -11,6 +11,7 @@ class LocationsController < ApplicationController
 
   def edit
     @location = @travel_journal.locations.find(params[:id])
+    @location.images.build
     respond_with(@location)    
   end
 
