@@ -3,4 +3,7 @@ class Location < ActiveRecord::Base
 
   has_many :images, dependent: :destroy
 
+  geocoded_by :address
+  after_validation :geocode 
+
 end

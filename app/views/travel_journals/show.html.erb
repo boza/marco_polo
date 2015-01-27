@@ -2,7 +2,7 @@
   <h3><%= @travel_journal.title%></h3>
   <h4>Start Date: <%= @travel_journal.start_date %></h4>
 </div>
-<div id="map-wrapper">
+<div id="map-wrapper" data-locations="<%= @travel_journal.locations.to_json(:lat, :lng) %>">
   <div id="map-canvas"></div>
 </div>
 

@@ -20,6 +20,8 @@
   height: 400px;
 }
 
+#map-canvas { height: 100%; margin: 0; padding: 0;}
+
 ul.travel_journal li {
   list-style: none;
 }
