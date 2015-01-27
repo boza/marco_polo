@@ -36,12 +36,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #### APPLICATION ####
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-foundation'
   gem 'rails-assets-angular'
 end
 
 gem 'clearance' #authentication
 gem 'geocoder'
+gem 'zurb-foundation'
 
 group :development, :test do
 
