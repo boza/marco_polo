@@ -14,7 +14,7 @@ window.gmapsInitialize = ->
     contentString =  '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      "<h5 id=\"firstHeading\" class=\"firstHeading\">#{location.address}</h5>"+
+      "<h5 id=\"firstHeading\" class=\"firstHeading\">#{location.title || location.address}</h5>"+
       '<div id="bodyContent">'+
       "<p>#{location.post || 'Write a post'}</p>"+
       "<p><a href='/travel_journals/#{travel_journal_id}/locations/#{location.id}/edit'>Add Images and Journal Entry!</a></p>"+
@@ -28,7 +28,7 @@ window.gmapsInitialize = ->
       position: new google.maps.LatLng(location.lat, location.lng)
       map: map
       animation: google.maps.Animation.DROP
-      title: location.address
+      title: location.title
       contentString: contentString
     
     bounds.extend marker.getPosition()

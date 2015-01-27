@@ -45,6 +45,8 @@ gem 'zurb-foundation'
 gem 'simple_form'
 gem 'country_select'
 gem 'responders'
+gem "mini_magick"
+gem "refile", require: ["refile/rails", "refile/image_processing"]
 
 group :development, :test do
 

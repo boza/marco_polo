@@ -1,0 +1,8 @@
+<div>
+  <h3><%= @location.title || @location.address %></h3>
+  <%= simple_form_for [@travel_journal, @location] do |form| %>
+    <%= form.input :title %>
+    <%= form.input :post %>
+    <%= form.submit %>
+  <% end %>
+</div>

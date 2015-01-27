@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150127171153) do
+ActiveRecord::Schema.define(version: 20150127194913) do
 
   create_table "images", force: :cascade do |t|
     t.integer  "location_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150127171153) do
     t.float    "lng"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.string   "title"
   end
 
   add_index "locations", ["travel_journal_id"], name: "index_locations_on_travel_journal_id"
