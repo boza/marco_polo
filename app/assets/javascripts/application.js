@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require angular
+//= require jquery_nested_form
 //= require_tree .
 
 

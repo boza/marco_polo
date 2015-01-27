@@ -47,6 +47,7 @@ gem 'country_select'
 gem 'responders'
 gem "mini_magick"
 gem "carrierwave"
+gem "nested_form"
 
 group :development, :test do
 
