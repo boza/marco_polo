@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  travel_journal_id: 
+  travel_journal_id: 1
   post: MyText
   lat: 1.5
   lng: 1.5
 
 two:
-  travel_journal_id: 
+  travel_journal_id: 2
   post: MyText
   lat: 1.5
   lng: 1.5

@@ -40,7 +40,11 @@
       bounds.extend(marker.getPosition());
     };
     
-    map.fitBounds(bounds) 
+    if (locations.length > 0) {
+      map.fitBounds(bounds);
+    } else {
+      map.setZoom(4)
+    }
   }
   google.maps.event.addDomListener(window, 'load', initialize);  
 
