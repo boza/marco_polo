@@ -10,6 +10,7 @@ class TravelJournalsController < ApplicationController
 
   def show
     @travel_journal = current_user.travel_journals.find(params[:id])
+    @location = @travel_journal.locations.build
   end
 
   def create

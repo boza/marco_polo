@@ -9,5 +9,8 @@
 <a href="#" data-reveal-id="locationForm">Add a new location</a>
 
 <div id="locationForm" class="reveal-modal" data-reveal>
-  
+  <%= simple_form_for [@travel_journal, @location], remote: true  do |form| %>
+    <%= form.input :address, placeholder: '48 Lower Mount Street Dublin 2, Ireland' %>
+    <%= form.submit %>
+  <% end %>
 </div>
