@@ -33,9 +33,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 
-#### APPLICATION
+#### APPLICATION ####
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-foundation'
+  gem 'rails-assets-angular'
+end
 
 gem 'clearance' #authentication
+gem 'geocoder'
 
 group :development, :test do
 
