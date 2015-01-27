@@ -1,0 +1,2 @@
+module TravelJournalsHelper
+end
