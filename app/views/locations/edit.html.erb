@@ -1,20 +1,23 @@
 <div>
   <h3><%= @location.title || @location.address %></h3>
-  <%= simple_nested_form_for [@travel_journal, @location] do |form| %>
-    <%= form.input :title %>
-    <%= form.input :post %>
-    <%= form.simple_fields_for :images do |image_fields| %>
+  
+  <%= nested_form_for [@travel_journal, @location] do |form| %>
+    <%= form.text_field :title %>
+    <%= form.text_area :post %>
+    
+    <%= form.fields_for :images, {}, { class: 'medium-3 columns' } do |image_fields| %>
       <% if image_fields.object.persisted? %>
         <%= image_tag(image_fields.object.picture.url(:thumb)) %>
-        <%= task_form.link_to_remove "Remove this image" %>
       <% else %>
-        <%= image_fields.input :picture, as: :file, label: false %>
-      <% end %>
+        <%= image_fields.file_field :picture %>
+      <% end %><br/>
       <%= image_fields.link_to_remove "Remove this image" %>
     <% end %>
-    <%= form.link_to_add "Add an Image", :images %>
-    <br>
-    <br>
+   
+
+    <p> <%= form.link_to_add "Add an Image", :images %></p>
+
+
     <%= form.submit %>
     <%= link_to "Back", @travel_journal %>
   <% end %>
