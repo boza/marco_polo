@@ -11,7 +11,7 @@
     <% if signed_in? %>
       <ul class="button-group right">
         <li><%= link_to "My Profile", current_user, class: 'button' %></li>
-        <li><%= link_to "My Journals", [:travel_journals], class: 'button' %></li>
+        <li><%= link_to "My Trips", [:travel_journals], class: 'button' %></li>
         <li><%= link_to "Sign Out", sign_out_path, class: 'button' %></li>
       </ul>
     <% else %>

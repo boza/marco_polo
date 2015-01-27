@@ -46,7 +46,7 @@ gem 'simple_form'
 gem 'country_select'
 gem 'responders'
 gem "mini_magick"
-gem "refile", require: ["refile/rails", "refile/image_processing"]
+gem "carrierwave"
 
 group :development, :test do
 

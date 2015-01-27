@@ -28,7 +28,7 @@ class LocationsController < ApplicationController
   end
 
   def location_params
-    params.require(:location).permit(:address, :title, :post)
+    params.require(:location).permit!#(:address, :title, :post, { images_attributes: [] })
   end
 
 end

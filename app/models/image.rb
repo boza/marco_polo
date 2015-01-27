@@ -1,7 +1,7 @@
 class Image < ActiveRecord::Base
   belongs_to :location
 
-  attachment :upload
+  mount_uploader :picture, PictureUploader
 
 
 end

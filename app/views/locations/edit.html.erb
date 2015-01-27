@@ -4,7 +4,11 @@
     <%= form.input :title %>
     <%= form.input :post %>
     <%= form.simple_fields_for :images do |image_fields| %>
-      <%= image_fields.attachment_field :upload %>
+      <% if image_fields.object.persisted? %>
+        <%= image_tag(image_fields.object.picture.url(:thumb)) %>
+      <% else %>
+        <%= image_fields.input :picture, as: :file %>
+      <% end %>
     <% end %>
     <%= form.submit %>
     <%= link_to "Back", @travel_journal %>
