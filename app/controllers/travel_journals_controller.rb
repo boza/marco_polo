@@ -8,6 +8,10 @@ class TravelJournalsController < ApplicationController
     @travel_journal = current_user.travel_journals.build
   end
 
+  def show
+    @travel_journal = current_user.travel_journals.find(params[:id])
+  end
+
   def create
     @travel_journal = current_user.travel_journals.create(travel_journal_params)
     respond_with(@travel_journal)
