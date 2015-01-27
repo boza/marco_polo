@@ -42,6 +42,8 @@ end
 gem 'clearance' #authentication
 gem 'geocoder'
 gem 'zurb-foundation'
+gem 'simple_form'
+gem 'country_select'
 
 group :development, :test do
 

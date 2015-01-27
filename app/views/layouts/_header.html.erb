@@ -8,9 +8,17 @@
     </h1>
   </div>
   <div class="large-7 columns">
-    <ul class="button-group right">
-      <li><%= link_to "Sign In", sign_in_path, class: 'button' %></li>
-    </ul>
+    <% if signed_in? %>
+      <ul class="button-group right">
+        <li><%= link_to "My Profile", current_user, class: 'button' %></li>
+        <li><%= link_to "My Journals", [:travel_journals], class: 'button' %></li>
+        <li><%= link_to "Sign Out", sign_out_path, class: 'button' %></li>
+      </ul>
+    <% else %>
+      <ul class="button-group right">
+        <li><%= link_to "Sign In", sign_in_path, class: 'button' %></li>
+      </ul>    
+    <% end %>
   </div>
 </div>
 
