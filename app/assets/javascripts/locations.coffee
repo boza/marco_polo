@@ -16,25 +16,25 @@ initialize = ->
       "<h5 id=\"firstHeading\" class=\"firstHeading\">#{location.address}</h5>"+
       '<div id="bodyContent">'+
       "<p>#{location.post || 'Write a post'}</p>"+
-      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-      '(last visited June 22, 2009).</p>'+
       '</div>'+
       '</div>';
 
     infowindow = new google.maps.InfoWindow
-      content: contentString
 
     
-    marker = new google.maps.Marker(
+    marker = new google.maps.Marker
       position: new google.maps.LatLng(location.lat, location.lng)
       map: map
       animation: google.maps.Animation.DROP
       title: location.address
-    )
+      contentString: contentString
+    
     bounds.extend marker.getPosition()
+    
     google.maps.event.addListener marker, 'click', (->
-      infowindow.open(map,marker) )
+        infowindow.setContent( this.contentString );
+        infowindow.open( map, this ) 
+      )
 
     i++
   
