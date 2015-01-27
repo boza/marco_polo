@@ -6,6 +6,7 @@
     <%= form.simple_fields_for :images do |image_fields| %>
       <% if image_fields.object.persisted? %>
         <%= image_tag(image_fields.object.picture.url(:thumb)) %>
+        <%= image_fields.input :_destroy, as: :boolean %>
       <% else %>
         <%= image_fields.input :picture, as: :file %>
       <% end %>
