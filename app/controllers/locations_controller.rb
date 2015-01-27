@@ -3,8 +3,9 @@ class LocationsController < ApplicationController
   before_action :find_travel_journal
 
   def create
-    @travel_journal.locations.create(location_params)
-    respond_with(@travel_journal)
+    @location = @travel_journal.locations.build(location_params)
+    @location.save
+    respond_with(@location)
   end
 
 
