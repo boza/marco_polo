@@ -44,6 +44,7 @@ gem 'geocoder'
 gem 'zurb-foundation'
 gem 'simple_form'
 gem 'country_select'
+gem 'responders'
 
 group :development, :test do
 
